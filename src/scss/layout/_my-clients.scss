@@ -1,0 +1,112 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+
+
+.my-clients {
+    background-color: $background-primary;
+
+    border-bottom: 1px solid $text-color-black;
+
+    @media (min-width: $bp-lg) {
+        padding-bottom: 60px;
+    }
+}
+
+.content-wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.my-clients__grid-container {
+    margin-top: 30px;
+
+    @media (min-width: $bp-lg) {
+        margin-top: 50px;
+
+        display: grid;
+        justify-content: center;
+        // align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        
+    }
+}
+
+.my-clients__grid-section {
+    padding: 40px 0px 40px 0px;
+    
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $border-color-primary;
+
+
+        @media (min-width: $bp-lg) {
+            border-bottom: none;
+        }
+    }
+
+    @media (min-width: $bp-lg) {
+        padding: 30px;
+        border-bottom: none;
+
+        &:nth-child(-n+2) {
+            border-right: 1px solid $text-color-black;
+        }
+
+        &:nth-child(-n+3) {
+            border-bottom: 1px solid $text-color-black;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+            border-right: 1px solid $text-color-black;
+        }
+    }
+
+}
+
+.my-clients__section-title {
+    display: inline-block;
+    margin-top: 30px;
+
+    @include font (40px, 800, 44px, $text-color-black-looks-like)
+}
+
+.my-clients__section-paragraph {
+    margin-top: 30px;
+
+    font-family: 'Inter', sans-serif;
+    @include font (20px, 400, 30px, $text-color-black);
+}
+
+.my-clients__frame-container {
+    margin-top: 30px;
+
+    @include flex (flex-start, center, row);
+    gap: 20px;
+}
+
+.my-clients__section-img {
+    height: 35px
+}
+
+.my-clients__frame-text {
+    @include flex (flex-start, flex-start, column);
+    gap: 10px;
+}
+
+.my-clients__frame-title {
+    font-family: 'Inter', sans-serif;
+    @include font (20px, 600, 20px, $text-color-black)
+}
+
+.my-clients__frame-description {
+    font-family: 'Inter', sans-serif;
+    @include font (20px, 400, 20px, $text-color-black)
+}

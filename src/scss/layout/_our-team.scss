@@ -1,0 +1,182 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+@import "../components/button";
+
+
+
+
+
+
+
+.our-team {
+
+    background-color: $background-primary;
+    @include flex (center, center, column);
+
+
+    @media (min-width: $bp-lg) {
+        border-bottom: 1px solid $background-secondary;
+    }
+
+
+}
+
+
+.our-team__title {
+    margin-bottom: 60px;
+
+    @media (min-width: $bp-lg) {
+        margin-bottom: 80px;
+    }
+}
+
+
+
+
+.our-team__team-member-wrapper {
+    @include flex (center, center, column);
+
+    @media (min-width: $bp-md) {
+        @include flex (end, end, column);
+    }
+
+    // @media (min-width: $bp-lg) {
+    //     @include flex (end, end, column);
+    // }
+}
+
+
+
+.our-team__team-member {
+    @include flex (center, center, column);
+
+
+
+
+    & img {
+        filter: grayscale(100%);
+        margin-bottom: 15px;
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 0.86;
+
+
+    }
+
+}
+
+
+.our-team__team-member-name {
+    text-transform: uppercase;
+    color: $text-color-primary;
+    margin-bottom: 5px;
+}
+
+
+
+.our-team__team-member-position {
+    font-size: 20px;
+    font-weight: 400;
+    color: $text-color-primary;
+    margin-bottom: 15px;
+}
+
+
+
+.our-team__social-media {
+    @include flex (center, center);
+    gap: 10px;
+}
+
+
+
+.our-team__grid-container {
+    display: grid;
+    gap: 40px;
+
+
+    @media (min-width: $bp-md) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+
+    @media (min-width: $bp-lg) {
+        grid-template-columns:  repeat(4, 1fr);
+    }
+
+
+}
+
+
+
+
+.our-team__team-call {
+    @include flex (center, center, column);
+    gap: 15px;
+
+
+    @media (min-width: $bp-md) {
+        @include flex (center, start, column);
+        grid-column: span 2;
+
+    }
+
+    @media (min-width: $bp-md) {
+        grid-column: span 2;
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+.our-team__call {
+    font-size: 30px;
+    font-weight: 400;
+    color: $text-color-black-looks-like;
+    text-transform: uppercase;
+    font-family: Gilroy-Regular;
+}
+
+
+.our-team__guestion {
+    @extend h4;
+    font-size: 40px;
+    text-align: center;
+
+    @media (min-width: $bp-md) {
+        font-size: 64px;
+        text-align: left;
+    }
+
+}
+
+
+.our-team__link {
+    @extend .btn;
+    width: 100%;
+    text-align: center;
+    max-width: 500px;
+    font-size: 18px;
+    font-weight: 400;
+
+
+    @media (min-width: $bp-md) {
+        text-align: left;
+        max-width: 165px;
+    }
+
+
+}

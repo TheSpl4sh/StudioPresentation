@@ -1,0 +1,149 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+@import "../components/button";
+
+
+
+
+
+.selected-work {
+    background-color: $background-primary;
+
+    border-bottom: 1px solid $border-color-primary;
+
+    @media (min-width: $bp-md) {
+        border-bottom: 1px solid $background-secondary;
+    }
+}
+
+
+
+
+.selected-work__title {
+    margin-bottom: 30px;
+    color: $text-color-primary;
+
+
+
+    @media (min-width: $bp-lg) {
+        margin-bottom: 50px;
+    }
+
+}
+
+
+
+.selected-work__img {
+
+    width: 100%;
+    margin-bottom: 20px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+
+
+
+}
+
+
+
+
+
+
+
+.selected-work__card-info {
+    height: fit-content;
+    @include flex (start, start, column);
+    gap: 30px;
+    margin-bottom: 40px;
+
+    @media (min-width: $bp-lg) {
+        @include flex (space-between, start, column);
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+}
+
+
+.selected-work__info-wrapper{
+    @include flex (start, start, column);
+    gap: 30px;
+}
+
+
+
+.selected-work__card-name {
+    line-height: 44px;
+    text-transform: uppercase;
+    color: $text-color-black;
+}
+
+
+
+.selected-work__list {
+    @include flex (start, start, row);
+    flex-wrap: wrap;
+    gap: 30px;
+
+
+}
+
+.selected-work__choose {
+    background-color: $background-thirdly;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: $text-color-primary;
+
+}
+
+
+
+.selected-work__discover {
+    @extend .btn;
+    width: 162px;
+    align-self: self-end;
+}
+
+
+
+.selected-work__choose-all {
+    @extend .selected-work__choose;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+
+
+    @media (min-width: $bp-md) {
+        width: 187px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+.selected-work__cards-conteiner {
+    @media (min-width: $bp-lg) {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr;
+       column-gap: 40px;
+       row-gap: 70px;
+
+    }
+}
+
+
+
+.selected-work__card-info--pc-first {
+    grid-column: 1;
+    grid-row: 1;
+}

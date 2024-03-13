@@ -1,0 +1,30 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+
+
+
+
+.btn {
+    @extend .selected-work__choose;
+    color: $text-color-secondary;
+    background-color: $background-secondary;
+    position: relative;
+
+    &::after {
+        content: "";
+        background-image: url(../../img/arrow-right.svg);
+        display: block;
+        position: absolute;
+        left: 65%;
+        top: 35%;
+        width: 24px;
+        height: 17px;
+    }
+
+
+
+}

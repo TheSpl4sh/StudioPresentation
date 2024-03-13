@@ -1,0 +1,220 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+
+
+
+
+
+.about-me {
+    min-width: 320px;
+    padding-top: 55px;
+    background: $background-primary;
+    @include flex (start, center, column);
+    text-align: center;
+
+
+
+
+    @media (min-width: $bp-md) {
+        padding-top: 101px;
+        border-bottom: 1px solid $background-secondary;
+    }
+
+}
+
+
+
+
+
+.about-me__name {
+    align-content: center;
+    @include flex (center, center, column);
+    margin: 0 30px;
+
+    @media (min-width: $bp-md) {
+        font-size: 120px;
+        margin: 0 70px;
+    }
+
+
+
+    @media (min-width: $bp-lg) {
+        font-size: 150px;
+    }
+
+
+}
+
+
+
+
+
+
+.about-me__profession {
+    text-transform: capitalize;
+    margin-bottom: 44px;
+
+    @media (min-width: $bp-md) {
+        font-size: 120px;
+        margin: 0 30px 70px;
+    }
+
+
+    @media (min-width: $bp-lg) {
+        font-size: 150px;
+    }
+
+
+
+    position: relative;
+
+    &::after {
+        content: "";
+        background-image: url(../../img/arrow-down.svg);
+        display: block;
+        position: absolute;
+        left: 47%;
+        top: 120%;
+        width: 30px;
+        height: 42px;
+
+
+
+    }
+
+}
+
+
+
+
+
+.about-me__banner {
+    width: 100%;
+    aspect-ratio: 0.75;
+    object-fit: cover;
+
+
+    @media (min-width: $bp-md) {
+        max-height: 956px;
+        aspect-ratio: 1.03;
+
+    }
+
+
+    @media (min-width: $bp-lg) {
+        font-size: 150px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.about-me__description-and-social {
+    @include flex (end, center, column);
+
+    @media (min-width: $bp-lg) {
+        @include flex (start, center);
+        max-width: 1920px;
+    }
+}
+
+
+.about-me__description {
+    color: $text-color-primary;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 30px 20px;
+
+
+    @media (min-width: $bp-md) {
+        font-size: 52px;
+        margin: 30px 30px;
+
+    }
+
+
+    @media (min-width: $bp-lg) {
+        font-size: 62px;
+        margin: 70px;
+        text-align: start;
+    }
+
+
+}
+
+
+
+.about-me__description--impotant {
+    font-size: 30px;
+    font-weight: 800;
+
+    @media (min-width: $bp-md) {
+        font-size: 52px;
+
+    }
+
+
+    @media (min-width: $bp-lg) {
+        font-size: 62px;
+    }
+
+
+}
+
+
+
+
+
+
+.about-me__socials {
+    @include flex (center, end, column);
+    background-color: $background-secondary;
+    padding: 40px 30px;
+    gap: 30px;
+    width: 100%;
+
+
+    @media (min-width: $bp-lg) {
+        padding: 60px 70px 60px 155px;
+        width: 485px;
+    }
+}
+
+
+
+
+
+.about-me__socials-title {
+    color: $text-color-secondary;
+    text-align: right;
+    font-family: Gilroy-Medium;
+    font-size: 28px;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-lg) {
+        font-size: 32px;
+    }
+}
+
+
+
+.about-me__social-list {
+    @include flex (end, center);
+    gap: 20px;
+
+}

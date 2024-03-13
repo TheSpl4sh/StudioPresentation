@@ -1,0 +1,122 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+
+.what-i-do {
+    background-color: $background-primary;
+    background-image: url("../../img/what-i-do/what-i-do-mobile.png");
+    background-size: 100% 478px;
+    background-repeat: no-repeat;
+
+
+    border-bottom: 1px solid $border-color-primary;
+
+    @media (min-width: $bp-md) {
+        background-size: 100% 991px;
+    }
+
+    @media (min-width: $bp-lg) {
+        background-size: 50% 1137px;
+    }
+
+}
+
+.content-wrapper--paddingg-reset {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    @media (min-width: $bp-md) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    @media (min-width: $bp-lg) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+.what-i-do__container {
+    padding-top: 498px;
+
+    @media (min-width: $bp-md) {
+        padding-top: 1030px;
+    }
+
+    @media (min-width: $bp-lg) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        padding-left: 50%;
+    }
+}
+
+.what-i-do__paragraphs-container {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $border-color-primary;
+    margin-top: 30px;
+
+    &--bigger-margin {
+        margin-top: 40px;
+    
+        @media (min-width: $bp-lg) {
+            margin-top: 100px;
+        }
+    }
+
+    &--border-reset {
+        border-bottom: 0px;
+        padding-bottom: 20px;
+
+        @media (min-width: $bp-md) {
+            padding-bottom: 40px;
+        }
+
+        @media (min-width: $bp-md) {
+            padding-bottom: 0px;
+        }
+    }
+
+    @media (min-width: $bp-md) {
+        padding-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    @media (min-width: $bp-lg) {
+        margin-left: 111px;
+    }
+}
+
+.what-i-do__main-title {
+    @media (min-width: $bp-lg) {
+        text-align: start;
+        margin-left: 111px;
+    }
+}
+
+.what-i-do__side-number {
+    @include font (35px, 300, 41px, $text-color-black);
+    font-style: normal;
+
+    @media (min-width: $bp-md) {
+        @include font (44px, 300, 48px, $text-color-black);
+    }
+}
+
+.what-i-do__side-title {
+    @include font (35px, 400, 41px, $text-color-black);
+    font-style: normal;
+
+    @media (min-width: $bp-md) {
+        @include font (44px, 400, 48px, $text-color-black);
+    }
+}
+
+.what-i-do__paragraph {
+    font-family: 'Inter', sans-serif;
+    margin: 10px 0px 0px 0px;
+
+    @include font (20px, 400, 28px, $text-color-black);
+}

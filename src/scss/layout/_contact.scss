@@ -1,0 +1,76 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+
+.contact {
+    background-color: $background-primary;
+    text-align: center;
+    border-bottom: 1px solid #252525;
+
+    @media (min-width: $bp-lg) {
+        padding-bottom: 30px;
+    }
+}
+
+.content-wrapper--flex {
+    @media (min-width: $bp-lg) {
+        @include flex (space-between, flex-start, row)
+    }
+}
+
+.contact__title {
+    flex: 1;
+}
+
+.contact__container {
+    flex: 1;
+    margin-top: 30px;
+
+    @media (min-width: $bp-md) {
+        margin-top: 40px;
+    }
+
+    @media (min-width: $bp-lg) {
+        text-align: start;
+        margin-top: 0px;
+    }
+}
+
+.contact__side-title {
+    @include font (50px, 400, 58px, $text-color-primary);
+}
+
+.contact__paragraph {
+    display: inline-block;
+    margin-top: 30px;
+    @include font (30px, 300, 35px, $text-color-primary);
+
+    @media (min-width: $bp-md) {
+        margin-top: 30px;
+    }
+}
+
+.contact__link {
+    @extend .btn;
+    display: inline-block;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    max-width: 500px;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (min-width: $bp-md) {
+        width: 195px;
+        text-align: left;
+
+        &::after {
+            left: 74%;
+            background-position: end;
+            right: 20px;
+        }
+    }
+}

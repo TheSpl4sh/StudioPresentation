@@ -1,0 +1,37 @@
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "../base/typography";
+
+
+
+
+.logos {
+    background-color: $background-primary;
+    @include flex (center, center, column);
+
+    @media (min-width: $bp-lg) {
+        border-bottom: 1px solid $background-secondary;
+    }
+
+}
+
+
+
+.logos__list {
+    @include flex (center, center);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+
+.logos__item {
+    background-color: $background-thirdly;
+    padding: 15px 40px;
+    border-radius: 50px;
+
+}

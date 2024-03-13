@@ -1,0 +1,20 @@
+// * Це головний sass/scss файл проекту
+// * імпортуйте сюди всі інші ваші файли sass/scss
+
+
+
+
+@import "./base/reset";
+@import "./base/defaults";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/fonts";
+@import "./layout/header";
+@import "./layout/about-me";
+@import "./layout/logos";
+@import "./layout/selected-work";
+@import "./layout/our-team";
+@import "./layout/what-i-do";
+@import "./layout/my-clients";
+@import "./layout/contact";
+@import "./layout/footer";
