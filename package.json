@@ -22,6 +22,11 @@
     "gulp-sass": "^5.1.0",
     "sass": "^1.69.4"
   },
-  "browserslist": ["last 3 version"],
-  "type": "module"
+  "browserslist": [
+    "last 3 version"
+  ],
+  "type": "module",
+  "dependencies": {
+    "gulp-gh-pages": "^0.5.4"
+  }
 }
